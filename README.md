@@ -144,7 +144,6 @@ See `requirements.txt`. Key dependencies:
                Steganography},
     author  = {Samir},
     year    = {2026},
-    month   = jun,
     note    = {Preprint. Department of Computer Science,
                Maharishi Dayanand University, Rohtak, India.},
     url     = {https://github.com/SamirXR/semantic-cloak}
