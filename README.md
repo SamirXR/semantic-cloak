@@ -139,12 +139,14 @@ See `requirements.txt`. Key dependencies:
 ## Citation
 
 ```bibtex
-@misc{samir2024semanticcloak,
-    title   = {Semantic Cloak: VLM-Guided Adaptive Steganography with
-               Honest Security Against Adaptive Detectors},
+@misc{samir2026frozenpriors,
+    title   = {Frozen Priors, Hidden Bits: VLM-Guided Adaptive
+               Steganography},
     author  = {Samir},
-    year    = {2024},
-    note    = {Preprint},
+    year    = {2026},
+    month   = jun,
+    note    = {Preprint. Department of Computer Science,
+               Maharishi Dayanand University, Rohtak, India.},
     url     = {https://github.com/SamirXR/semantic-cloak}
 }
 ```

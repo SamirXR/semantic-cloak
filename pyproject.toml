@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "semantic-cloak"
 version = "0.2.0"
-description = "VLM-Guided Adaptive Steganography with Honest Security Against Adaptive Detectors"
+description = "Frozen Priors, Hidden Bits: VLM-Guided Adaptive Steganography"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
