@@ -1,0 +1,36 @@
+# Adaptive-security experiment configuration
+# ==========================================
+# Runs only the adaptive-security evaluation (primary metric in the paper).
+# Trains a fresh SRNet per scheme on that scheme's own stego.
+
+datasets:
+  - bossbase
+
+bossbase_root: data/BOSSBase_1.01
+
+schemes:
+  - s_uniward
+  - wow
+  - hugo
+  - ddsp
+  - semantic_cloak
+
+target_bpp: 0.4
+passphrase: "semantic-cloak-adaptive-v1"
+
+clip_model: openai/clip-vit-base-patch32
+sam_checkpoint: weights/sam_vit_h_4b8939.pth
+
+steganalyzer:
+  model: srnet
+  epochs: 200
+  batch_size: 64
+  lr: 0.001
+  adaptive: true   # retrain per scheme
+
+robustness:
+  jpeg_qualities: [75, 85, 95]
+  noise_sigmas: [1, 2, 5]
+
+output_dir: outputs/adaptive
+device: cuda

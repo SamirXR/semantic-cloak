@@ -1,0 +1,29 @@
+# Core
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+pillow>=10.0.0
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# Crypto
+cryptography>=41.0.0
+
+# VLMs
+transformers>=4.30.0
+segment-anything>=1.0
+
+# Baselines
+pywavelets>=1.5.0
+scipy>=1.10.0
+
+# Metrics
+scikit-image>=0.21.0
+lpips>=0.1.4
+
+# Compression
+lz4>=4.0.0
+
+# Development
+pytest>=7.0.0
+pytest-cov>=4.0.0

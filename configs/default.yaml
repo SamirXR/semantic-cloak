@@ -1,0 +1,46 @@
+# Default experiment configuration
+# ===============================
+# Reproduces the main results (Tables 1-4) from the paper.
+
+# Datasets
+datasets:
+  - bossbase
+  # - alaska   # uncomment to also run on ALASKA #2
+
+bossbase_root: data/BOSSBase_1.01
+alaska_root: data/ALASKA2
+
+# Schemes to evaluate
+schemes:
+  - s_uniward
+  - wow
+  - hugo
+  - semantic_cloak
+  # - ddsp   # requires DDSP_CKPT env var to be set
+
+# Embedding
+target_bpp: 0.4
+passphrase: "semantic-cloak-experiment-v1"
+
+# VLM checkpoints (run scripts/download_weights.sh first)
+clip_model: openai/clip-vit-base-patch32
+sam_checkpoint: weights/sam_vit_h_4b8939.pth
+
+# Steganalyzer
+steganalyzer:
+  model: srnet
+  epochs: 200
+  batch_size: 64
+  lr: 0.001
+
+# Robustness probes
+robustness:
+  jpeg_qualities: [75, 85, 95]
+  noise_sigmas: [1, 2, 5]
+
+# Output
+output_dir: outputs
+device: cuda   # or cpu
+
+# For smoke tests: limit number of images
+# max_images: 50
